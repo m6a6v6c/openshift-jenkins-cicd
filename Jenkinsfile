@@ -32,7 +32,7 @@ pipeline
               script {
                 openshift.withCluster() {
                   openshift.withProject() {
-                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=registry.access.redhat.com/ubi8/openjdk-8@sha256:e84dc58de05b53f0b238adeadc816483930873a2cd8b5fd875566fbf2994ac54", "--binary=true", "--allow-missing-images")
+                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=quay.io/sshaaf/rhel7-jre8-mpdemo", "--binary=true", "--allow-missing-images")
                   }
                 }
               }
