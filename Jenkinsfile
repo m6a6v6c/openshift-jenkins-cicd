@@ -32,7 +32,7 @@ pipeline
               script {
                 openshift.withCluster() {
                   openshift.withProject() {
-                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=sibdocker/openjdk18-openshift", "--binary=true")
+                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=docker.io/redhatopenjdk/redhat-openjdk18-openshift", "--binary=true")
                   }
                 }
               }
