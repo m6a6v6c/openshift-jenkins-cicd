@@ -32,7 +32,7 @@ pipeline
               script {
                 openshift.withCluster() {
                   openshift.withProject() {
-                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift", "--binary=true", "--allow-missing-images", "--token=sha256~Hac9kW0Ztzl_iHccaVL8HJBFONcjtFWxjXB7f6A-48Y")
+                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=ubi8/openjdk-8", "--binary=true", "--allow-missing-images", "--token=sha256~Hac9kW0Ztzl_iHccaVL8HJBFONcjtFWxjXB7f6A-48Y")
                   }
                 }
               }
