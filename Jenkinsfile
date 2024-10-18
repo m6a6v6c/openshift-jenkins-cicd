@@ -33,7 +33,6 @@ pipeline
                 openshift.withCluster() {
                   openshift.withProject() {
                     openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=juniorjbn/openjdk18-openshift:latest", "--binary=true")
-                      docker pull juniorjbn/openjdk18-openshift:latest
                   }
                 }
               }
