@@ -32,7 +32,7 @@ pipeline
               script {
                 openshift.withCluster() {
                   openshift.withProject() {
-                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=quay.io/profidata/dev.ubi8.jdk", "--binary=true")
+                    openshift.newBuild("--name=sample-app-jenkins-new", "--image-stream=quay.io/profidata/dev.ubi8.jdk", "--binary=true", "--allow-missing-images", "--token=sha256~Hac9kW0Ztzl_iHccaVL8HJBFONcjtFWxjXB7f6A-48Y")
                   }
                 }
               }
